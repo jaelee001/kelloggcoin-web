@@ -8,7 +8,7 @@
 <ul>
     <% for transaction in transactions %>
         <% if transaction.from_user == nil%>
-            <li>Initial coin offering: <%=transaction.amount%> to <%=transaction.to_user_id%></li>
+            <li>Initial coin offering: <%=transaction.amount%> to <%=transaction.to_user.name%></li>
         <%else%>
             <li><%=transaction.amount%> KC from <%=transaction.from_user.name%> to <%=transaction.to_user.name%></li>
         <%end%>
